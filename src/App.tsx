@@ -850,7 +850,9 @@ function ContactPage() {
               <Typography variant="h5" fontWeight={800} gutterBottom>Send a Message</Typography>
               {(() => {
                 const formId = (import.meta as any).env?.VITE_FORMSPREE_ID as string | undefined
-                const action = formId ? `https://formspree.io/f/${formId}` : undefined
+                const action = formId
+                  ? (formId.startsWith('http') ? formId : `https://formspree.io/f/${formId}`)
+                  : undefined
                 return (
                   <Box component="form" method="POST" action={action} onSubmit={(e)=>{ if (!action) { e.preventDefault(); window.location.href = 'mailto:asuraholidays123@gmail.com' } }}>
                     <Stack spacing={1.5}>

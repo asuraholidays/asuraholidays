@@ -3,20 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://asuraholidays.github.io/asuraholidays/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "typescript": "~5.8.3",
     "vite": "^7.1.7",
-    "gh-pages": "^6.2.0",
     "@vitejs/plugin-react": "^4.3.4"
   },
   "dependencies": {
